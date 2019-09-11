@@ -62,7 +62,6 @@ class App extends Component {
     this.subscribeStore=this.subscribeStore.bind(this)
     this.state=store.getState();
     store.subscribe(this.subscribeStore);
-    // this.delet=this.delet.bind(this);
   }
   subscribeStore(){
     this.setState(store.getState())
@@ -86,8 +85,8 @@ class App extends Component {
              onChange={this.onchange.bind(this)}
              onClick={this.onclick.bind(this)} 
              list={this.state.list} 
-             onClicks={this.delet.bind(this)} //1个方法
-             // onClicks={()=>{this.delet(this)}}
+             onClicks={this.delet.bind(this)}          //1个方法
+             
              />
   );
   }

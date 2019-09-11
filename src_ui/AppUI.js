@@ -5,6 +5,8 @@ class AppUI extends Component {
     
   }
   //1个方法
+  //1个方法
+  //1个方法
   del(index){
     this.props.onClicks(index)
   }
@@ -18,9 +20,10 @@ class AppUI extends Component {
         this.props.list.map((item,index)=>{
                                   
           return <div key={index} 
-          // onClick={()=>{this.del(index)}}
-          // onClick={this.props.onClicks.bind(this,index)}
-          onClick={()=>this.props.onClicks(index)}
+          // onClick={()=>{this.del(index)}}                   //1个方法
+          // onClick={()=>this.props.onClicks(index)}          //1个方法
+          onClick={this.props.onClicks.bind(this,index)}    //1个方法（可能会挂掉）
+          
           >{item}</div>
         })
       }
