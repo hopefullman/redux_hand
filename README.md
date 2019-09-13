@@ -7,4 +7,4 @@ actionType
 
 actionCreate
 
-组件拆分
+组件拆分 分清谁是父组件方法  父组件接受子组件的传递参数
